@@ -1,0 +1,10 @@
+<div *ngFor="let interview of list" class="mb-5 card">
+  <div class="card-body">
+    {{interview.start_time | date}} to {{interview.end_time | date}}<br>
+    <hr>
+    <span class="text-muted">Participants:</span><br>
+    <div *ngFor="let part of interview.participants">
+      {{part.name}}
+    </div>
+  </div>
+</div>
